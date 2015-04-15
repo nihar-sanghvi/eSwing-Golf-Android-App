@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ESwing</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_second__page">Second_Page</string>
+</resources>
