@@ -20,6 +20,18 @@
             android:name=".Second_Page"
             android:label="@string/title_activity_second__page" >
         </activity>
+        <activity
+            android:name=".HomePage"
+            android:label="@string/title_activity_home_page" >
+        </activity>
+        <activity
+            android:name=".AccountCreated"
+            android:label="@string/title_activity_account_created_page" >
+        </activity>
+        <activity
+            android:name=".StartPlaying"
+            android:label="@string/title_activity_start_playing" >
+        </activity>
     </application>
 
 </manifest>
