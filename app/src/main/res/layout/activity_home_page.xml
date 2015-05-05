@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -8,9 +8,20 @@
     android:background="@drawable/grass">
     //android:id="@+id/">
 
-    <ImageView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="New User?"
+        android:id="@+id/textView2"
+        android:textColor="@color/accent_material_dark"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_toStartOf="@+id/sign_in_button"
+        android:layout_gravity="bottom" />
+
+    <ImageView
+        android:layout_width="205dp"
+        android:layout_height="205dp"
         android:id="@+id/eSwingLogo"
         android:src="@drawable/eswing_logo"
         android:layout_alignEnd="@+id/sign_in_button"
@@ -27,17 +38,8 @@
         android:id="@+id/sign_in_button"
         android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="47dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="New User?"
-        android:id="@+id/textView2"
-        android:textColor="@color/accent_material_dark"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_toStartOf="@+id/sign_in_button" />
+        android:layout_marginBottom="47dp"
+        android:layout_gravity="bottom" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -49,4 +51,4 @@
         android:layout_toEndOf="@+id/eSwingLogo"
         android:layout_marginBottom="54dp" />
 
-</RelativeLayout>
+</LinearLayout>
