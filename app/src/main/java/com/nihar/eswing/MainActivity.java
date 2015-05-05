@@ -20,7 +20,7 @@ public class MainActivity extends ActionBarActivity {
         sign_in_button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), Second_Page.class);
+                Intent intent = new Intent(v.getContext(), HomePage.class);
                 startActivityForResult(intent, 0);
             }
         });
