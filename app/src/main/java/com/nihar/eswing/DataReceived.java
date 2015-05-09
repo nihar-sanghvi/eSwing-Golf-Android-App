@@ -1,36 +1,23 @@
 package com.nihar.eswing;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 
-public class SignUp extends ActionBarActivity {
+public class DataReceived extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
-
-        Button signUpButton = (Button) findViewById(R.id.sign_in_button);
-        signUpButton.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), HomePage.class);
-                startActivityForResult(intent, 0);
-            }
-        });
+        setContentView(R.layout.activity_data_received);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_sign_up, menu);
+        getMenuInflater().inflate(R.menu.menu_data_received, menu);
         return true;
     }
 
