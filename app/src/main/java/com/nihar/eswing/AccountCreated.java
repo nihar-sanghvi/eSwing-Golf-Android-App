@@ -1,9 +1,12 @@
 package com.nihar.eswing;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class AccountCreated extends ActionBarActivity {
@@ -11,13 +14,22 @@ public class AccountCreated extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account_created_page);
+        setContentView(R.layout.activity_account_created);
+
+        Button startPlayingButton = (Button) findViewById(R.id.startPlayingButton);
+        startPlayingButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), StartPlayingNew.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_account_created_page, menu);
+        getMenuInflater().inflate(R.menu.menu_account_created, menu);
         return true;
     }
 
