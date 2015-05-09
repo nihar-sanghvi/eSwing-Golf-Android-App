@@ -7,4 +7,5 @@
     <string name="title_activity_home_page">HomePage</string>
     <string name="title_activity_account_created_page">AccountCreatedPage</string>
     <string name="title_activity_start_playing">StartPlaying</string>
+    <string name="title_activity_device_scan">DeviceScanActivity</string>
 </resources>

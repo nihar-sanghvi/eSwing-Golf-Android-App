@@ -34,7 +34,11 @@
         </activity>
         <activity
             android:name=".GenerateReport"
-            android:label= "Generate Report" >
+            android:label="Generate Report" >
+        </activity>
+        <activity
+            android:name=".DeviceScanActivity"
+            android:label="@string/title_activity_device_scan" >
         </activity>
     </application>
 
