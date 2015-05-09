@@ -1,9 +1,12 @@
 package com.nihar.eswing;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class SignUp extends ActionBarActivity {
@@ -12,6 +15,15 @@ public class SignUp extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        Button signUpButton = (Button) findViewById(R.id.sign_in_button);
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), HomePage.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 
 
