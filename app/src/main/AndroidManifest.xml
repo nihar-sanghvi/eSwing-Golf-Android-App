@@ -8,8 +8,8 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name=".HomePage"
+            android:label="Welcome to eSwing!" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,20 +17,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Second_Page"
-            android:label="@string/title_activity_second__page" >
+            android:name=".MainActivity"
+            android:label="Log In to your account" >
         </activity>
         <activity
-            android:name=".HomePage"
-            android:label="@string/title_activity_home_page" >
+            android:name=".StartPlayingNew"
+            android:label="Final Settings" >
         </activity>
         <activity
             android:name=".AccountCreated"
-            android:label="@string/title_activity_account_created_page" >
+            android:label="Account Created" >
         </activity>
         <activity
-            android:name=".StartPlaying"
-            android:label="@string/title_activity_start_playing" >
+            android:name=".DataReceived"
+            android:label="Data Received" >
+        </activity>
+        <activity
+            android:name=".GenerateReport"
+            android:label= "Generate Report" >
         </activity>
     </application>
 
