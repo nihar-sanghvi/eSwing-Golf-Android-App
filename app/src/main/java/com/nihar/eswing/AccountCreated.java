@@ -20,7 +20,16 @@ public class AccountCreated extends ActionBarActivity {
         startPlayingButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), StartPlayingNew.class);
+                Intent intent = new Intent(v.getContext(), MainList.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+
+        Button personalInfoButton = (Button) findViewById(R.id.addInfoButton);
+        personalInfoButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), PersonalInfo.class);
                 startActivityForResult(intent, 0);
             }
         });
