@@ -40,6 +40,42 @@
             android:name=".DeviceScanActivity"
             android:label="@string/title_activity_device_scan" >
         </activity>
+        <activity
+            android:name=".SignUp"
+            android:label="@string/title_activity_sign_up" >
+        </activity>
+        <activity
+            android:name=".PersonalInfo"
+            android:label="@string/title_activity_personal_info" >
+        </activity>
+        <activity
+            android:name=".Clubs"
+            android:label="@string/title_activity_clubs" >
+        </activity>
+        <activity
+            android:name=".Menu"
+            android:label="@string/title_activity_menu" >
+        </activity>
+        <activity
+            android:name=".MainList"
+            android:label="@string/title_activity_main_list" >
+        </activity>
+        <activity
+            android:name=".PairDevice"
+            android:label="@string/title_activity_pair_device" >
+        </activity>
+        <activity
+            android:name=".ClubAdd"
+            android:label="@string/title_activity_club_add" >
+        </activity>
+        <activity
+            android:name=".PlayerAdd"
+            android:label="@string/title_activity_player_add" >
+        </activity>
+        <activity
+            android:name=".Visualization"
+            android:label="@string/title_activity_visualization" >
+        </activity>
     </application>
 
 </manifest>
