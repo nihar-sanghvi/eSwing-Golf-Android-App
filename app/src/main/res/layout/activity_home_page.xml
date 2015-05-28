@@ -14,33 +14,23 @@
         android:layout_height="174dp"
         android:id="@+id/imageView"
         android:src="@drawable/eswing_logo"
-        android:layout_above="@+id/signInButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/signUpButton" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SIGN IN"
         android:id="@+id/signInButton"
-        android:layout_above="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp" />
-
-    <TextView
-        android:layout_width="107dp"
-        android:layout_height="111dp"
-        android:text="New User?"
-        android:id="@+id/textView2"
-        android:textColor="@color/bright_foreground_material_dark"
-        android:textSize="22sp"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/signUpButton" />
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SIGN UP"
+        android:text="CREATE ACCOUNT"
         android:id="@+id/signUpButton"
         android:layout_below="@+id/signInButton"
-        android:layout_toEndOf="@+id/signInButton" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
