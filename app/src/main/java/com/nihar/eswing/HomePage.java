@@ -28,7 +28,7 @@ public class HomePage extends ActionBarActivity {
         signUpButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), AccountCreated.class);
+                Intent intent = new Intent(v.getContext(), SignUp.class);
                 startActivityForResult(intent, 0);
             }
         });
