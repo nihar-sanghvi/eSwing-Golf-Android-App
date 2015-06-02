@@ -1,9 +1,12 @@
 package com.nihar.eswing;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class PlayerAdd extends ActionBarActivity {
@@ -12,6 +15,14 @@ public class PlayerAdd extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player_add);
+        Button select_player_button = (Button) findViewById(R.id.button7);
+        select_player_button.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), MainList.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 
 
