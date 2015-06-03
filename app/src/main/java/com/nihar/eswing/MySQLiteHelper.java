@@ -24,7 +24,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public MySQLiteHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
-
+    // Test edit
     @Override
     public void onCreate(SQLiteDatabase db) {
         // SQL statement to create book table
