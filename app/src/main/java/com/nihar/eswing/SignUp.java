@@ -7,27 +7,35 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.EditText;
 
 public class SignUp extends ActionBarActivity {
+    EditText name;
+    EditText displayName;
+    MySQLiteHelper msh = new MySQLiteHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        name = (EditText) findViewById(R.id.editText4);
+        displayName = (EditText) findViewById(R.id.editText5);
+
         Button signUpButton = (Button) findViewById(R.id.signUp);
         signUpButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+                String playername = name.getText().toString();
+                String displayname = displayName.getText().toString();
+                Player p = new Player(playername, displayname);
+                msh.addPlayer(p);
+
                 Intent intent = new Intent(v.getContext(), AccountCreated.class);
                 startActivityForResult(intent, 0);
             }
         });
-
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
