@@ -76,6 +76,10 @@
             android:name=".Visualization"
             android:label="@string/title_activity_visualization" >
         </activity>
+        <activity
+            android:name=".PlayersChosen"
+            android:label="@string/title_activity_players_chosen" >
+        </activity>
     </application>
 
 </manifest>
