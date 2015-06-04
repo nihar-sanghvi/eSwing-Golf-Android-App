@@ -5,19 +5,43 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class ClubChose extends ActionBarActivity {
+    String playersss;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_club_chose);
         Intent intent = getIntent();
-        String playersss = intent.getStringExtra("parameter name1");
+        playersss = intent.getStringExtra("parameter name1");
         TextView txtChosenPlayerss = (TextView)findViewById(R.id.playerss);
         txtChosenPlayerss.setText("Select Clubs from the list below for"+" "+playersss);
+
+        Button doneButton = (Button) findViewById(R.id.button);
+        doneButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+//                Intent intent = new Intent(v.getContext(), MainList.class);
+//                startActivityForResult(intent, 0);
+                Toast.makeText(getApplicationContext(), "Clubs chosen for"+" "+ playersss+"."+"Choose for all players", Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+        Button startplaying = (Button) findViewById(R.id.button6);
+        startplaying.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Bluetooth1.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 
 
