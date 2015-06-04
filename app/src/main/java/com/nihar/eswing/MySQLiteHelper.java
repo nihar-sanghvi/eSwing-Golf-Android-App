@@ -80,31 +80,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public void addPlayer(Player player) {
         SQLiteDatabase db = this.getWritableDatabase();
 
-        db.execSQL("DROP TABLE IF EXISTS player");
-
-        String CREATE_PLAYER_TABLE = "CREATE TABLE player ( " +
-                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "name TEXT NOT NULL, " +
-                "displayName TEXT NOT NULL UNIQUE, " +
-                "email TEXT, " +
-                "password TEXT, " +
-                "golfSwing TEXT, " +
-                "usualScore TEXT, " +
-                "gender TEXT, " +
-                "birthDate TEXT, " +
-                "streetAddress TEXT, " +
-                "city TEXT, " +
-                "state TEXT, " +
-                "postalCode TEXT, " +
-                "country TEXT, " +
-                "shareEmail TEXT, " +
-                "inGolfIndustry TEXT, " +
-                "golfProfessional TEXT)";
-
-
-        // create books table
-        db.execSQL(CREATE_PLAYER_TABLE);
-
         Log.d("addPlayer", player.toString());
         // 1. get reference to writable DB
 
@@ -137,7 +112,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public Player getPlayer(int id) {
+    public Player getPlayer(String displayName) {
 
         // 1. get reference to readable DB
         SQLiteDatabase db = this.getReadableDatabase();
@@ -146,8 +121,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         Cursor cursor =
                 db.query(TABLE_PLAYER, // a. table
                         COLUMNS, // b. column names
-                        " id = ?", // c. selections
-                        new String[]{String.valueOf(id)}, // d. selections args
+                        " displayName = ?", // c. selections
+                        new String[]{String.valueOf(displayName)}, // d. selections args
                         null, // e. group by
                         null, // f. having
                         null, // g. order by
@@ -163,7 +138,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         book.setName(cursor.getString(1));
         book.setDisplayName(cursor.getString(2));
 
-        Log.d("getBook(" + id + ")", book.toString());
+        Log.d("getPlayer(" + displayName + ")", book.toString());
 
         // 5. return book
         return book;

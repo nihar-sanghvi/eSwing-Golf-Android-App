@@ -134,7 +134,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CLEAR"
-        android:id="@+id/button"
+        android:id="@+id/clear"
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/textView3"
         android:layout_marginBottom="46dp" />
@@ -144,8 +144,8 @@
         android:layout_height="wrap_content"
         android:text="SIGN UP"
         android:id="@+id/signUp"
-        android:layout_alignBottom="@+id/button"
-        android:layout_toEndOf="@+id/button"
+        android:layout_alignBottom="@+id/clear"
+        android:layout_toEndOf="@+id/clear"
         android:layout_marginStart="26dp" />
 
     <TextView
