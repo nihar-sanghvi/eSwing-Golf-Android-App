@@ -85,8 +85,21 @@
             android:label="@string/title_activity_club_chose" >
         </activity>
         <activity
+
             android:name=".Visualization2"
-            android:label="@string/title_activity_vizualization2" >
+            android:label="Visualization2" >
+
+            android:name=".Bluetooth1"
+            android:label="@string/title_activity_bluetooth1" >
+        </activity>
+        <activity
+            android:name=".Bluetooth2"
+            android:label="@string/title_activity_bluetooth2" >
+        </activity>
+        <activity
+            android:name=".VisualizationData"
+            android:label="@string/title_activity_visualization_data" >
+
         </activity>
     </application>
 
