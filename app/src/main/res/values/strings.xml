@@ -17,4 +17,6 @@
     <string name="title_activity_club_add">ClubAdd</string>
     <string name="title_activity_player_add">PlayerAdd</string>
     <string name="title_activity_visualization">Visualization</string>
+    <string name="title_activity_players_chosen">PlayersChosen</string>
+    <string name="title_activity_club_chose">ClubChose</string>
 </resources>
