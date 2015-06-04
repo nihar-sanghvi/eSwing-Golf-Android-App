@@ -80,6 +80,10 @@
             android:name=".PlayersChosen"
             android:label="@string/title_activity_players_chosen" >
         </activity>
+        <activity
+            android:name=".ClubChose"
+            android:label="@string/title_activity_club_chose" >
+        </activity>
     </application>
 
 </manifest>
