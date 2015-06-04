@@ -1,9 +1,12 @@
 package com.nihar.eswing;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class Visualization extends ActionBarActivity {
@@ -12,6 +15,24 @@ public class Visualization extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visualization);
+
+        Button viz2Button = (Button) findViewById(R.id.button);
+        viz2Button.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Visualization2.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+
+        Button buttonHome = (Button) findViewById(R.id.buttonHome);
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), MainList.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 
 

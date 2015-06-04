@@ -9,17 +9,27 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class DataReceived extends ActionBarActivity {
+public class Visualization2 extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_data_received);
-        Button swingAwayButton = (Button) findViewById(R.id.swingAwayButton);
-        swingAwayButton.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_visualization2);
+
+        Button viz1Button = (Button) findViewById(R.id.button);
+        viz1Button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), VisualizationData.class);
+                Intent intent = new Intent(v.getContext(), Visualization.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+
+        Button buttonHome = (Button) findViewById(R.id.buttonHome);
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), MainList.class);
                 startActivityForResult(intent, 0);
             }
         });
@@ -28,7 +38,7 @@ public class DataReceived extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_data_received, menu);
+        getMenuInflater().inflate(R.menu.menu_vizualization2, menu);
         return true;
     }
 

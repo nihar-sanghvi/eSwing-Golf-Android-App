@@ -84,6 +84,10 @@
             android:name=".ClubChose"
             android:label="@string/title_activity_club_chose" >
         </activity>
+        <activity
+            android:name=".Visualization2"
+            android:label="@string/title_activity_vizualization2" >
+        </activity>
     </application>
 
 </manifest>

@@ -6,14 +6,22 @@ package com.nihar.eswing;
 public class Player {
 
     public int id;
-    public String name;
+    public String playerName;
     public String displayName;
+    public String email;
+    public String password;
+    public String golfSwing;
+    public String gender;
+    public String birthDate;
+    public String address;
+    public String skillLevel;
+    public String inGolfIndustry;
 
     public Player(){}
 
-    public Player(String name, String displayName) {
+    public Player(String playerName, String displayName) {
         super();
-        this.name = name;
+        this.playerName = playerName;
         this.displayName = displayName;
     }
 
@@ -22,7 +30,7 @@ public class Player {
         return id;
     }
     public String getName(){
-        return name;
+        return playerName;
     }
     public String getDisplayName(){
         return displayName;
@@ -31,15 +39,15 @@ public class Player {
     public void setId(int id){
         this.id = id;
     }
-    public void setName(String name){
-        this.name = name;
+    public void setName(String playerName){
+        this.playerName = playerName;
     }
     public void setDisplayName(String displayName){
         this.displayName = displayName;
     }
     @Override
     public String toString() {
-        return "Player [id=" + id + ", name=" + name + ", displayName=" + displayName
+        return "Player [id=" + id + ", name=" + playerName + ", displayName=" + displayName
                 + "]";
     }
 }
