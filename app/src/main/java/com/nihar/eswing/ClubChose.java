@@ -34,8 +34,8 @@ public class ClubChose extends ActionBarActivity {
             }
         });
 
-        Button startplaying = (Button) findViewById(R.id.button6);
-        startplaying.setOnClickListener(new View.OnClickListener() {
+        Button startPlaying = (Button) findViewById(R.id.button6);
+        startPlaying.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), Bluetooth1.class);
