@@ -35,6 +35,20 @@ public class SignUp extends ActionBarActivity {
                 startActivityForResult(intent, 0);
             }
         });
+
+        Button clearButton = (Button) findViewById(R.id.clear);
+        clearButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                /*String playername = name.getText().toString();
+                String displayname = displayName.getText().toString();
+                Player p = new Player(playername, displayname);*/
+                msh.getPlayer("nihar");
+
+                Intent intent = new Intent(v.getContext(), AccountCreated.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 
     @Override
