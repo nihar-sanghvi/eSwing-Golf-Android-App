@@ -1,9 +1,12 @@
 package com.nihar.eswing;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class DataReceived extends ActionBarActivity {
@@ -12,6 +15,14 @@ public class DataReceived extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_received);
+        Button swingAwayButton = (Button) findViewById(R.id.swingAwayButton);
+        swingAwayButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), VisualizationData.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 
     @Override
