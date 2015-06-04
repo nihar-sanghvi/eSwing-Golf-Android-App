@@ -33,13 +33,15 @@
                 android:text="Player Name"
                 android:id="@+id/textView4"
                 android:layout_column="0"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:layout_weight="1" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText4"
-                android:layout_column="2" />
+                android:layout_column="2"
+                android:layout_weight="1" />
         </TableRow>
 
         <TableRow
@@ -52,13 +54,15 @@
                 android:text="Display Name"
                 android:id="@+id/textView12"
                 android:layout_column="0"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:layout_weight="1" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText5"
-                android:layout_column="2" />
+                android:layout_column="2"
+                android:layout_weight="1" />
         </TableRow>
 
         <TableRow
@@ -71,13 +75,15 @@
                 android:text="Email id"
                 android:id="@+id/textView13"
                 android:layout_column="0"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:layout_weight="1" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText6"
-                android:layout_column="2" />
+                android:layout_column="2"
+                android:layout_weight="1" />
         </TableRow>
 
         <TableRow
@@ -90,13 +96,15 @@
                 android:text="Password"
                 android:id="@+id/textView14"
                 android:layout_column="0"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:layout_weight="1" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText7"
-                android:layout_column="2" />
+                android:layout_column="2"
+                android:layout_weight="1" />
         </TableRow>
 
         <TableRow
@@ -109,70 +117,17 @@
                 android:text="Confirm Password"
                 android:id="@+id/textView15"
                 android:layout_column="0"
-                android:textColor="#ffffffff" />
+                android:textColor="#ffffffff"
+                android:layout_weight="1" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText8"
-                android:layout_column="2" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Golf Swing"
-                android:id="@+id/textView16"
-                android:layout_column="0"
-                android:textColor="#ffffffff" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Right Handed"
-                android:id="@+id/radioButton"
                 android:layout_column="2"
-                android:checked="true"
-                android:textColor="#ffffffff" />
-
+                android:layout_weight="1" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Left handed"
-                android:id="@+id/radioButton2"
-                android:layout_column="2"
-                android:checked="false"
-                android:textColor="#ffffffff" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Usual Score"
-                android:id="@+id/textView17"
-                android:layout_column="0"
-                android:textColor="#ffffffff" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/editText9"
-                android:layout_column="2" />
-        </TableRow>
     </TableLayout>
 
     <Button
@@ -180,10 +135,9 @@
         android:layout_height="wrap_content"
         android:text="CLEAR"
         android:id="@+id/button"
-        android:layout_below="@+id/tableLayout"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="31dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textView3"
+        android:layout_marginBottom="46dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -193,5 +147,37 @@
         android:layout_alignBottom="@+id/button"
         android:layout_toEndOf="@+id/button"
         android:layout_marginStart="26dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Golf Swing"
+        android:id="@+id/textView16"
+        android:layout_below="@+id/tableLayout"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffffff" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView16"
+        android:layout_alignEnd="@+id/signUp">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Left Handed"
+            android:id="@+id/radioButton"
+            android:checked="true"
+            android:textColor="#ffffffff" />
+
+        <RadioButton
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:text="Right Handed"
+            android:id="@+id/radioButton2"
+            android:checked="false"
+            android:textColor="#ffffffff" />
+    </RadioGroup>
 
 </RelativeLayout>
