@@ -40,10 +40,10 @@ public class SignUp extends ActionBarActivity {
         clearButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                /*String playername = name.getText().toString();
+                //String playername = name.getText().toString();
                 String displayname = displayName.getText().toString();
-                Player p = new Player(playername, displayname);*/
-                msh.getPlayer("nihar");
+                //Player p = new Player(playername, displayname);
+                msh.getPlayer(displayname);
 
                 Intent intent = new Intent(v.getContext(), AccountCreated.class);
                 startActivityForResult(intent, 0);
