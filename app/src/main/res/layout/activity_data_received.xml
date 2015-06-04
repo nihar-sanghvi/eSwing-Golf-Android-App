@@ -14,7 +14,8 @@
         android:textAlignment="center"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp" />
+        android:layout_marginTop="44dp"
+        android:textColor="#fffefefe" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +26,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="54dp"
         android:textSize="25dp"
-        android:password="false" />
+        android:password="false"
+        android:textColor="#fffcfcfc" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,7 +36,8 @@
         android:id="@+id/textView10"
         android:textSize="25dp"
         android:layout_below="@+id/textView9"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#fffcfcfc" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -44,7 +47,8 @@
         android:textSize="25dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView10"
-        android:layout_alignEnd="@+id/textView10" />
+        android:layout_alignEnd="@+id/textView10"
+        android:textColor="#fffcfcfc" />
 
     <EditText
         android:layout_width="wrap_content"

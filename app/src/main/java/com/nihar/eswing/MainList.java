@@ -20,7 +20,7 @@ public class MainList extends ActionBarActivity {
         pair.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), PairDevice.class);
+                Intent intent = new Intent(v.getContext(), Bluetooth1.class);
                 startActivityForResult(intent, 0);
             }
         });
