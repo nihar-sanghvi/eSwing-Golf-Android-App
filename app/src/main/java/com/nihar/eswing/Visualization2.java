@@ -9,18 +9,18 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class Visualization extends ActionBarActivity {
+public class Visualization2 extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_visualization);
+        setContentView(R.layout.activity_visualization2);
 
-        Button viz2Button = (Button) findViewById(R.id.button);
-        viz2Button.setOnClickListener(new View.OnClickListener() {
+        Button viz1Button = (Button) findViewById(R.id.button);
+        viz1Button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), Visualization2.class);
+                Intent intent = new Intent(v.getContext(), Visualization.class);
                 startActivityForResult(intent, 0);
             }
         });
@@ -35,11 +35,10 @@ public class Visualization extends ActionBarActivity {
         });
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_visualization, menu);
+        getMenuInflater().inflate(R.menu.menu_vizualization2, menu);
         return true;
     }
 

@@ -40,7 +40,14 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "birthDate TEXT, " +
                 "address TEXT, " +
                 "skillLevel TEXT, " +
-                "inGolfIndustry TEXT, " +
+                "inGolfIndustry TEXT)";
+
+
+        // create books table
+        db.execSQL(CREATE_PLAYER_TABLE);
+
+        String CREATE_PLAYERS_CLUB_TABLE = " CREATE TABLE playersClubs ( " +
+                " displayName TEXT NOT NULL, " +
                 "club1 TEXT, " +
                 "club2 TEXT, " +
                 "club3 TEXT, " +
@@ -53,11 +60,32 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "club10 TEXT, " +
                 "club11 TEXT, " +
                 "club12 TEXT, " +
-                "club13 TEXT)";
+                "club13 TEXT" +
+                "club14 TEXT, " +
+                "club15 TEXT, " +
+                "club16 TEXT, " +
+                "club17 TEXT, " +
+                "club18 TEXT, " +
+                "club19 TEXT, " +
+                "club20 TEXT)";
+
+        // create player's club table
+        db.execSQL(CREATE_PLAYERS_CLUB_TABLE);
+
+        String CREATE_CLUB_TABLE = " CREATE TABLE clubs ( " +
+                "clubID TEXT NOT NULL, " +
+                "clubDisplayName TEXT NOT NULL, " +
+                "profile INTEGER, " +
+                "nomLoft INTEGER, " +
+                "weight INTEGER, " +
+                "cor INTEGER, " +
+                "nomSR INTEGER, " +
+                "nomV1 INTEGER )";
+
+        // create player's club table
+        db.execSQL(CREATE_CLUB_TABLE);
 
 
-        // create books table
-        db.execSQL(CREATE_PLAYER_TABLE);
     }
 
     @Override
@@ -109,20 +137,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "birthDate TEXT, " +
                 "address TEXT, " +
                 "skillLevel TEXT, " +
-                "inGolfIndustry TEXT, " +
-                "club1 TEXT, " +
-                "club2 TEXT, " +
-                "club3 TEXT, " +
-                "club4 TEXT, " +
-                "club5 TEXT, " +
-                "club6 TEXT, " +
-                "club7 TEXT, " +
-                "club8 TEXT, " +
-                "club9 TEXT, " +
-                "club10 TEXT, " +
-                "club11 TEXT, " +
-                "club12 TEXT, " +
-                "club13 TEXT)";
+                "inGolfIndustry TEXT)";
 
         db.execSQL(CREATE_PLAYER_TABLE);
 
