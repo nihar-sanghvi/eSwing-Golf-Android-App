@@ -7,48 +7,57 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 
-public class ClubChose extends ActionBarActivity {
-    String playersss;
-
+public class Bluetooth1 extends ActionBarActivity {
+    Button search;
+    private Switch mySwitch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_club_chose);
-        Intent intent = getIntent();
-        playersss = intent.getStringExtra("parameter name1");
-        TextView txtChosenPlayerss = (TextView)findViewById(R.id.playerss);
-        txtChosenPlayerss.setText("Select Clubs from the list below for"+" "+playersss);
+        setContentView(R.layout.activity_bluetooth1);
 
-        Button doneButton = (Button) findViewById(R.id.button);
-        doneButton.setOnClickListener(new View.OnClickListener() {
+        search = (Button)findViewById(R.id.search);
+        mySwitch = (Switch) findViewById(R.id.mySwitch);
 
-            public void onClick(View v) {
-//                Intent intent = new Intent(v.getContext(), MainList.class);
-//                startActivityForResult(intent, 0);
-                Toast.makeText(getApplicationContext(), "Clubs chosen for"+" "+ playersss+"."+"Choose for all players", Toast.LENGTH_LONG).show();
+        //set the switch to ON
+        mySwitch.setChecked(true);
+        //attach a listener to check for changes in state
+        mySwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+
+                if(isChecked){
+                    search.setVisibility(View.VISIBLE);
+                }else{
+                   search.setVisibility(View.INVISIBLE);
+                }
 
             }
         });
 
-        Button startplaying = (Button) findViewById(R.id.button6);
-        startplaying.setOnClickListener(new View.OnClickListener() {
+        Button connect = (Button) findViewById(R.id.search);
+        connect.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), Bluetooth1.class);
+                Intent intent = new Intent(v.getContext(), Bluetooth2.class);
                 startActivityForResult(intent, 0);
             }
         });
     }
 
 
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_club_chose, menu);
+        getMenuInflater().inflate(R.menu.menu_bluetooth1, menu);
         return true;
     }
 

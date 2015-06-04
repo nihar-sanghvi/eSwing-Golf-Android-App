@@ -9,26 +9,27 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class DataReceived extends ActionBarActivity {
+public class Bluetooth2 extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_data_received);
-        Button swingAwayButton = (Button) findViewById(R.id.swingAwayButton);
-        swingAwayButton.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_bluetooth2);
+        Button sendData = (Button) findViewById(R.id.button13);
+        sendData.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), VisualizationData.class);
+                Intent intent = new Intent(v.getContext(), DataReceived.class);
                 startActivityForResult(intent, 0);
             }
         });
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_data_received, menu);
+        getMenuInflater().inflate(R.menu.menu_bluetooth2, menu);
         return true;
     }
 
