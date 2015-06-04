@@ -31,22 +31,29 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
         String CREATE_PLAYER_TABLE = "CREATE TABLE player ( " +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "name TEXT NOT NULL, " +
+                "playerName TEXT NOT NULL, " +
                 "displayName TEXT NOT NULL UNIQUE, " +
-                "email TEXT, " +
-                "password TEXT, " +
-                "golfSwing TEXT, " +
-                "usualScore TEXT, " +
+                "email TEXT NOT NULL UNIQUE, " +
+                "password TEXT NOT NULL, " +
+                "golfSwing TEXT NOT NULL, " +
                 "gender TEXT, " +
                 "birthDate TEXT, " +
-                "streetAddress TEXT, " +
-                "city TEXT, " +
-                "state TEXT, " +
-                "postalCode TEXT, " +
-                "country TEXT, " +
-                "shareEmail TEXT, " +
+                "address TEXT, " +
+                "skillLevel TEXT, " +
                 "inGolfIndustry TEXT, " +
-                "golfProfessional TEXT)";
+                "club1 TEXT, " +
+                "club2 TEXT, " +
+                "club3 TEXT, " +
+                "club4 TEXT, " +
+                "club5 TEXT, " +
+                "club6 TEXT, " +
+                "club7 TEXT, " +
+                "club8 TEXT, " +
+                "club9 TEXT, " +
+                "club10 TEXT, " +
+                "club11 TEXT, " +
+                "club12 TEXT, " +
+                "club13 TEXT)";
 
 
         // create books table
@@ -72,36 +79,68 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
     // player Table Columns names
     private static final String KEY_ID = "id";
-    private static final String KEY_NAME = "name";
+    private static final String KEY_NAME = "playerName";
     private static final String KEY_DISPLAY_NAME = "displayName";
+    private static final String KEY_EMAIL = "email";
+    private static final String KEY_PASSWORD = "password";
+    private static final String KEY_GOLF_SWING = "golfSwing";
+    private static final String KEY_GENDER = "gender";
+    private static final String KEY_BIRTHDATE = "birthDate";
+    private static final String KEY_ADDRESS = "address";
+    private static final String KEY_SKILL_LEVEL = "skillLevel";
+    private static final String KEY_IN_GOLF_INDUSTRY = "inGolfIndustry";
 
-    private static final String[] COLUMNS = {KEY_ID, KEY_NAME, KEY_DISPLAY_NAME};
+    private static final String[] COLUMNS = {KEY_ID, KEY_NAME, KEY_DISPLAY_NAME, KEY_EMAIL, KEY_PASSWORD, KEY_GOLF_SWING,
+    KEY_GENDER, KEY_BIRTHDATE, KEY_ADDRESS, KEY_SKILL_LEVEL, KEY_IN_GOLF_INDUSTRY};
 
     public void addPlayer(Player player) {
         SQLiteDatabase db = this.getWritableDatabase();
+
+        db.execSQL("DROP TABLE IF EXISTS player");
+
+        String CREATE_PLAYER_TABLE = "CREATE TABLE player ( " +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "playerName TEXT NOT NULL, " +
+                "displayName TEXT NOT NULL UNIQUE, " +
+                "email TEXT NOT NULL UNIQUE, " +
+                "password TEXT NOT NULL, " +
+                "golfSwing TEXT NOT NULL, " +
+                "gender TEXT, " +
+                "birthDate TEXT, " +
+                "address TEXT, " +
+                "skillLevel TEXT, " +
+                "inGolfIndustry TEXT, " +
+                "club1 TEXT, " +
+                "club2 TEXT, " +
+                "club3 TEXT, " +
+                "club4 TEXT, " +
+                "club5 TEXT, " +
+                "club6 TEXT, " +
+                "club7 TEXT, " +
+                "club8 TEXT, " +
+                "club9 TEXT, " +
+                "club10 TEXT, " +
+                "club11 TEXT, " +
+                "club12 TEXT, " +
+                "club13 TEXT)";
+
+        db.execSQL(CREATE_PLAYER_TABLE);
 
         Log.d("addPlayer", player.toString());
         // 1. get reference to writable DB
 
         // 2. create ContentValues to add key "column"/value
         ContentValues values = new ContentValues();
-        values.put(KEY_NAME, player.name); // get name
+        values.put(KEY_NAME, player.playerName); // get name
         values.put(KEY_DISPLAY_NAME, player.displayName); // get displayName
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
-        values.put(KEY_NAME, player.getName());
+        values.put(KEY_EMAIL, player.email);
+        values.put(KEY_PASSWORD, player.password);
+        values.put(KEY_GOLF_SWING, player.golfSwing);
+        values.put(KEY_GENDER, player.gender);
+        values.put(KEY_BIRTHDATE, player.birthDate);
+        values.put(KEY_ADDRESS, player.address);
+        values.put(KEY_SKILL_LEVEL, player.skillLevel);
+        values.put(KEY_IN_GOLF_INDUSTRY, player.inGolfIndustry);
 
         // 3. insert
         db.insert(TABLE_PLAYER, // table
@@ -133,15 +172,15 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             cursor.moveToFirst();
 
         // 4. build book object
-        Player book = new Player();
-        book.setId(Integer.parseInt(cursor.getString(0)));
-        book.setName(cursor.getString(1));
-        book.setDisplayName(cursor.getString(2));
+        Player player = new Player();
+        player.setId(Integer.parseInt(cursor.getString(0)));
+        player.setName(cursor.getString(1));
+        player.setDisplayName(cursor.getString(2));
 
-        Log.d("getPlayer(" + displayName + ")", book.toString());
+        Log.d("getPlayer(" + displayName + ")", player.toString());
 
         // 5. return book
-        return book;
+        return player;
     }
 
     /*// Get All Books
