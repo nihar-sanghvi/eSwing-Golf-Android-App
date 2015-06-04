@@ -19,5 +19,11 @@
     <string name="title_activity_visualization">Visualization</string>
     <string name="title_activity_players_chosen">PlayersChosen</string>
     <string name="title_activity_club_chose">ClubChose</string>
-    <string name="title_activity_vizualization2">Vizualization2</string>
+
+    <string name="title_activity_visualization2">Visualization2</string>
+
+    <string name="title_activity_bluetooth1">Bluetooth1</string>
+    <string name="title_activity_bluetooth2">Bluetooth2</string>
+    <string name="title_activity_visualization_data">VisualizationData</string>
+
 </resources>
