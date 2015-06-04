@@ -14,6 +14,9 @@ import java.util.ArrayList;
 
 public class PlayersChosen extends ActionBarActivity {
 
+    Button btn3;
+    Button btn4;
+    Button btn5;
 
 
     @Override
@@ -36,9 +39,9 @@ public class PlayersChosen extends ActionBarActivity {
         Intent intent = getIntent();
 
         ArrayList<String> chosenPlayers = intent.getStringArrayListExtra("parameter name");
-        Button btn3 = (Button)findViewById(R.id.button3);
-        Button btn4 = (Button)findViewById(R.id.button4);
-        Button btn5 = (Button)findViewById(R.id.button5);
+        btn3 = (Button)findViewById(R.id.button3);
+        btn4 = (Button)findViewById(R.id.button4);
+        btn5 = (Button)findViewById(R.id.button5);
         int size = chosenPlayers.size();
         String final_player_selection ="";
         if(size==3){
@@ -56,6 +59,33 @@ public class PlayersChosen extends ActionBarActivity {
             btn4.setVisibility(View.INVISIBLE);
             btn5.setVisibility(View.INVISIBLE);
         }
+
+
+    }
+    String player;
+
+    public void chooseClubs(View view){
+        switch(view.getId())
+        {
+            case R.id.button3:
+//                Button btn3 = (Button)findViewById(R.id.button3);
+//                Button b = (Button)view;
+
+                player = btn3.getText().toString();
+
+                break;
+
+            case R.id.button4:
+                player = btn4.getText().toString();
+                break;
+
+            case R.id.button5:
+                player = btn5.getText().toString();
+                break;
+        }
+        Intent intent = new Intent(PlayersChosen.this, ClubChose.class);
+        intent.putExtra("parameter name1",player);
+        startActivity(intent);
 
 
     }
